@@ -281,12 +281,17 @@ body, button, input, textarea {
 
   /* Reduce header padding for small devices */
   .screen-header {
-    padding: 8px 15px;
+    padding: 8px px;
   }
 
   .screen-header-button {
     width: 6px;
     height: 6px;
     margin-right: 2px;
+  }
+}
+@media (max-width: 600px) {
+  .app-title:after {
+    width: 105px; /* or any desired longer width */
   }
 }
