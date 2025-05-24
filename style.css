@@ -1,3 +1,233 @@
+/* Reset and base */
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+
+  background: linear-gradient(270deg, #2b7577, #c8d8e4);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  margin: 0;
+  height: 100vh;
+
+  /* Center flip container horizontally & vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Flip container and flipper */
+.flip-container {
+  perspective: 1200px;
+  width: 700px;
+  height: 450px;
+  position: relative;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.flipper.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  border-radius: 15px;
+
+  /* BACKGROUND + SHADOW FIX */
+  background-color: #3e3e3e;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+  /* Preserve 3D and hide backface */
+  backface-visibility: hidden;
+
+  /* Flex column layout inside faces */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back face rotation */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* .screen styles inside flip-card faces */
+.screen {
+  position: relative;
+  flex: 1; /* fill container */
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: transparent; /* Already set in flip-card faces */
+}
+
+/* Screen shadow duplicate removed here because flip-card faces have it */
+
+/* Screen header */
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: #4d4d4f;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+/* Screen body */
+.screen-body {
+  display: flex;
+  flex: 1;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-body-item.left {
+  justify-content: center;
+}
+
+/* Company name */
+.company-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  color: #fff;
+}
+
+.company-name .volatile {
+  color: #52ab98;
+}
+
+.company-name .separator {
+  color: #aaadad;
+}
+
+.company-name .solutions {
+  color: #ffffff;
+}
+
+/* App title */
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 26px;
+  color: #f2f2f2;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 4px;
+  background: #52ab98;
+}
+
+/* Contact info */
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #413a3a;
+}
+
+/* Buttons */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+button {
+  background-color: #52ab98;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #42947a;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -295,3 +525,4 @@ body, button, input, textarea {
     width: 105px; /* or any desired longer width */
   }
 }
+s
