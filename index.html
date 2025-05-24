@@ -1,27 +1,71 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="contact-container">
-    <form action="https://formspree.io/f/manozggr" method="POST" class="contact-left">
-      <div class="contact-left-title">
-        <h2>Get in touch</h2>
-        <hr>
-      </div>
-                <input type="hidden" name="access_key" value="a002ec34-6b0d-4344-a925-8d1196eeebea">
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-            <button type="submit">Submit <img src="assets/arrow_icon.png"></button>
-        </form>
-        <div class="contact-right">
-            <img src="assets/right_img.png" alt="">
+  <div class="background">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
         </div>
+
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            
+            <!-- NEW COMPANY NAME LINE -->
+            <div class="company-name">
+              <span class="volatile">VOLATILE</span><span class="separator"> | </span><span class="solutions">SOLUTIONS</span>
+            </div>
+
+            <div class="app-title">
+              <span>CONTACT</span>
+              <span>US</span>
+            </div>
+            <div class="app-contact"></div>
+          </div>
+
+          <div class="screen-body-item">
+            <form action="https://formspree.io/f/manozggr" method="POST" class="app-form">
+              <input type="hidden" name="access_key" value="a002ec34-6b0d-4344-a925-8d1196eeebea" />
+
+              <div class="app-form-group">
+                <input type="text" name="name" placeholder="NAME" class="app-form-control" required />
+              </div>
+              <div class="app-form-group">
+                <input type="email" name="email" placeholder="EMAIL" class="app-form-control" required />
+              </div>
+              <div class="app-form-group">
+                <input type="text" name="contact_no" placeholder="CONTACT #" class="app-form-control" />
+              </div>
+              <div class="app-form-group message">
+                <textarea name="message" placeholder="MESSAGE" class="app-form-control" required></textarea>
+              </div>
+              <div class="app-form-group buttons">
+                <button type="reset" class="app-form-button">CANCEL</button>
+                <button type="submit" class="app-form-button">SEND</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
+  </div>
+
 </body>
 </html>
