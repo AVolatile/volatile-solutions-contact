@@ -222,3 +222,71 @@ body, button, input, textarea {
   outline-color: #444 !important;
   transition: background-color 5000s ease-in-out 0s;
 }
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .container {
+    flex: 1 1 100%;
+    padding: 20px 10px;
+    margin: 10px;
+  }
+
+  .screen {
+    border-radius: 10px;
+  }
+
+  .screen-body {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .screen-body-item {
+    padding: 20px 10px;
+  }
+
+  .screen-body-item.left {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Company name smaller and spaced for narrow screen */
+  .company-name {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .app-title {
+    font-size: 20px;
+  }
+
+  /* Make form inputs full width */
+  .app-form-control {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+
+  /* Buttons full width and stack vertically */
+  .app-form-group.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .app-form-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+
+  /* Reduce header padding for small devices */
+  .screen-header {
+    padding: 8px 15px;
+  }
+
+  .screen-header-button {
+    width: 6px;
+    height: 6px;
+    margin-right: 2px;
+  }
+}
