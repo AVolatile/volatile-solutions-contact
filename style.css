@@ -593,3 +593,80 @@ body, button, input, textarea {
     transform-origin: center;
   }
 }
+@media (max-width: 600px) {
+  html, body {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+  }
+
+  .flip-container {
+    width: 95%;
+    height: auto;
+    min-height: 500px;
+    margin: 40px auto;
+  }
+
+  .flipper,
+  .flip-card-front,
+  .flip-card-back {
+    height: 100%;
+    min-height: 600px;
+  }
+
+  .screen-body {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .screen-body-item {
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .app-form-group.buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .flip-card-back .screen-body {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .flip-card-back .screen-body-item {
+    flex: 1;
+    justify-content: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .flip-card-back .app-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .flip-card-back .app-title:after {
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 1025px) {
+  .app-form-control {
+    font-size: 12px;
+    padding: 14px 8px;
+  }
+
+  .app-form-group.message .app-form-control {
+    min-height: 40px;
+  }
+
+  .screen-body-item {
+    gap: 10px;
+  }
+}
