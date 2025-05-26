@@ -216,7 +216,7 @@ button {
   background-color: #52ab98;
   border: none;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 10px;
   font-weight: 700;
   color: white;
   cursor: pointer;
@@ -457,17 +457,23 @@ body, button, input, textarea {
 }
 
 .learn-more-button,
-.go-back-button {
-  margin-top: 20px;
-  padding: 10px 20px;
+.go-back-button,
+.go-to-site-button {
+  margin-top: 10px;
+  padding: 10px 10px;
   background-color: #52ab98;
   border: none;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+.go-to-site-button {
+  text-decoration: none;   /* removes underline */
+  display: inline-block;   /* makes it behave like a button */
+  text-align: center;      /* ensures text is centered */
 }
 
 .learn-more-button:hover,
